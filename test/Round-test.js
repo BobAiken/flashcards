@@ -39,8 +39,8 @@ describe("Round", () => {
 
   it("should have a deck", () => expect(round).to.have.property("deck"));
 
-  it("should keep track of how many rounds have occured", () =>
-    expect(round).to.have.property("rounds").to.deep.equal(0));
+  it("should keep track of how many turns have occured", () =>
+    expect(round).to.have.property("turns").to.deep.equal(0));
 
   it("should track incorrect guesses", () => {
     expect(round).to.have.property("incorrectGuesses").to.be.an("array");
@@ -58,9 +58,9 @@ describe("Round", () => {
     expect(round.currentTurn).to.be.an.instanceOf(Turn);
   });
 
-  it("should increment the rounds count", () => {
+  it("should increment the turns count", () => {
     round.takeTurn("sea otter");
-    expect(round.rounds).to.be.deep.equal(1);
+    expect(round.turns).to.be.deep.equal(1);
   });
 
   it("should evaluate the guess", () => {
