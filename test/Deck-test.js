@@ -2,6 +2,7 @@ const chai = require("chai");
 const expect = chai.expect;
 const Card = require("../src/Card");
 const Deck = require("../src/Deck");
+const Game = require("../src/Game");
 
 describe("Deck", () => {
   let card1;
@@ -30,6 +31,7 @@ describe("Deck", () => {
 
     deck = new Deck([card1, card2, card3]);
   });
+  it("should be a function", () => expect(Deck).to.be.a("function"));
 
   it("should be an instance of deck", () =>
     expect(deck).to.be.an.instanceof(Deck));
