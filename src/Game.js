@@ -8,11 +8,11 @@ const Round = require("./Round");
 class Game {
   constructor() {
     this.currentRound = 0;
-    this.cards;
-    this.deck;
-    this.round;
-    // console.log(prototypeQuestions);
+    this.cards = null;
+    this.deck = null;
+    this.round = null;
   }
+
   start() {
     this.makeCards();
     this.fillDeck();
